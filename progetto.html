@@ -1,0 +1,103 @@
+<!--<!DOCTYPE html>-->
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62809346-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments) };
+            gtag('js', new Date());
+            gtag('config', 'UA-62809346-2');
+        </script>
+    </head>
+    <body>
+
+        <h1>CONSEQUENCES OF COVID-19</h1>
+        <p style="font-size:16px; margin-left:15%;margin-right:15%; font-style:none; margin-top:2%; margin-bottom:-2%">Europe is facing the dramatic consequences of a worldwide pandemic caused by SARS-CoV2, or severe acute respiratory syndrome coronavirus 2, shortly COVID-19. Since the end of 2019 and the beginning of 2020, the world and Europe have entered unknown territories. After its outbreak in the city of Wuhan in China (December 2019), the virus spread at the beginning of 2020 over the world. Almost unnoticed, the virus sets foot in Europe (end of February in Mulhouse, France, and Codogno, Italy) and quickly spread over Europe with the beginning of the ski-holidays and carnival festivities end of February 2020. During this first period, European countries were confused and struggled how to deal with the growing number of infections and deaths. Much is still unknown about the virus. Doctors and scientists do the best they can but are still facing many uncertainties, despite the fact that several vaccines have been developed and vaccinations have been started in all European countries the beginning of 2021. Politicians formulated and implemented measures based on available scientific knowledge varying from social distancing, lock-downs, face-masks, expanding intensive care capacity in hospitals to setting up temporary test stations.</p>
+     <div id= "map" style="margin-bottom:22%">
+
+        <p style="font-size:20px; font-weight:bold;">Choose the country by clicking on the map</p>
+        <p style="font-size:17px; ">In the map below you can choose a country of the European community,<br>
+          country colors are sorted from lightest to darkest shade,<br>
+          based on the number of <b>people present per square km</b>. </p>
+
+         <div id=mapchar class="mapchar overlay">
+
+         </div>
+         <div  id=btn-zoom>
+            <i id="btn-zoom--in" class="fa fa-search-plus fa-2x" aria-hidden="true"></i>
+            <i id="btn-zoom--out"class="fa fa-search-minus fa-2x" aria-hidden="true"></i>
+          </div>
+          <div style="text-align:center;margin-left:37% ;padding-bottom:100px">
+            <p id="choosen_country0" style="color:black; font-size:24px; font-style:bold; display:flex; font-weight:bold;"></p>
+            <p id="choosen_country1" style="color:#a734d1; font-size:23px; font-style:bold; display:flex;float:left;"></p>
+            <p id="choosen_country2" style="color:#e3a842; font-size:23px; font-style:bold; display:flex;float:left; margin-left:20px"></p>
+            <p id="choosen_country3" style="color:#09c206; font-size:23px; font-style:bold; display:flex;float:left; margin-left:20px"></p>
+          </div>
+
+
+     </div>
+     <div id= scatter class="chars" style="margin-top:300px;">
+            <p style="   font-style:italic; font-weight:bold;  font-size:24px;">
+            Air passenger transport by reporting country
+            </p>
+            <p style="   font-style:italic;   font-size:17px;">
+              The total number of passengers travelling by air in the European Union countries during 2020 year was 277 million,
+               marking a total of 73 per cent decrease compared to 2019 figures,
+                the data provided by the statistical office of the European Union, Eurostat shows.
+              Due to the rapid spread of the Coronavirus and its new strains,
+               all European Union Member States suffered a large decrease in air traffic, while the International Air Transport (IATA),
+                previously called 2020 “the worst year ever” in the history of global air transport.<br>
+                <b>In the graph below you can see how many people have decided to go to the selected country in a given year, obviously as you can see,
+               in 2020 there was a drastic decline.</b>
+              </p>
+            <div id="scatterchar">
+
+            </div>
+    </div>
+    <div id= linear class="chars" style="margin-top:20%">
+           <p style="   font-style:italic; font-weight:bold; font-size:24px; ">
+            E-commerce sales
+           </p>
+           <p style="   font-style:italic;   font-size:17px; " >
+            The graph below shows the number of companies, <b> in percentage </b>, that have obtained online orders.
+            Given the various increases, a significant percentage could be expected in 2020,
+             instead in many cases the growth has remained unchanged and in some cases the percentages have even decreased.
+            </p>
+           <div id="linearchar">
+
+           </div>
+
+    </div>
+    <div id="bars1" style="margin-top:15%;">
+    <p id="noia" style="   font-style:italic; font-weight:bold; font-size:24px; "></p>
+    <p style="   font-style:italic;   font-size:17px; margin-left:30%; margin-right:30% " id="noia2">
+      </p>
+    <div id= bars class="chars1">
+
+        <div id="barschar1" class="barchar" >
+
+        </div>
+        <div id="barschar2" class="barchar"  >
+
+        </div>
+        <div id="barschar3" class="barchar" >
+
+        </div>
+    </div>
+  </div>
+
+
+   </div>
+    <script src="europe.js"></script>
+    <script src="density2.js"></script>
+  <script src="progetto.js"></script>
+    </body>
+
+</html>
